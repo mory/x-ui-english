@@ -111,7 +111,7 @@ install_base(){
 download_xui(){
 
     
-    if [ $# == 0 ]; then
+    if [ $# == 88 ]; then
         last_version=$(curl -Ls "https://api.github.com/repos/mory/x-ui-english/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/') || last_version=$(curl -sm8 https://raw.githubusercontent.com/mory/x-ui-english/main/config/version >/dev/null 2>&1)
         if [[ -z "$last_version" ]]; then
             red "Detecting the X-UI version failed, please make sure your server can connect to the Github API"
